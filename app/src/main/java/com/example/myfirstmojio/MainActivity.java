@@ -16,12 +16,13 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.mojio.mojiosdk.MojioClient;
-import com.mojio.mojiosdk.models.User;
-import com.mojio.mojiosdk.models.Vehicle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import io.moj.mobile.android.sdk.MojioClient;
+import io.moj.mobile.android.sdk.models.User;
+import io.moj.mobile.android.sdk.models.Vehicle;
 
 public class MainActivity extends ActionBarActivity implements OnMapReadyCallback {
 
@@ -153,7 +154,7 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
                 Vehicle v;
                 for (int i=0; i < mUserVehicles.length; i++) {
                     v = result[i];
-                    listData.add(String.format("%s %s", v.getNameDescription(), v.LicensePlate));
+                    listData.add(String.format("%s %s", v.VehicleName, v.LicensePlate));
                 }
 
                 // Show result in list
@@ -189,11 +190,11 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
             try {
                 vPos = new LatLng(v.LastLocation.Lat, v.LastLocation.Lng);
                 map.addMarker(new MarkerOptions()
-                        .title(v.getNameDescription())
+                        .title(v.VehicleName)
                         .position(vPos));
             }
             catch (Exception e) {
-                Toast.makeText(MainActivity.this, "No location for " + v.getNameDescription(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "No location for " + v.VehicleName, Toast.LENGTH_LONG).show();
             }
         }
 

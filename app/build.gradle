@@ -34,5 +34,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile 'joda-time:joda-time:2.5'
-    compile 'com.mojio.mojiosdk:mojiosdksrc:1.0.0@aar'
+    compile files('libs/signalr-client-sdk.jar')
+    compile files('libs/signalr-client-sdk-android.jar')
+    compile 'io.moj.mobile.android.sdk:mojiosdksrc-release:1.0.1@aar'
 }
