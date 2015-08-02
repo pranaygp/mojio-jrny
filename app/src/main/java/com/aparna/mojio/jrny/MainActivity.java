@@ -1,4 +1,4 @@
-package com.example.myfirstmojio;
+package com.aparna.mojio.jrny;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,8 +31,8 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
     // These values will match the keys given to you for your Mojio application in the
     // Mojio Developer panel.
     //===========================================================================
-    private final static String MOJIO_APP_ID = "<YOUR_APP_ID>";
-    private final static String REDIRECT_URL = "<YOUR_APP_REDIRECT>://"; // Example "myfirstmojio://"
+    private final static String MOJIO_APP_ID = "99c8af83-a1ee-4171-93a0-9077b3430525";
+    private final static String REDIRECT_URL = "myfirstmojio://"; // Example "myfirstmojio://"
 
     //===========================================================================
     // Activity properties

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myfirstmojio">
+    package="com.aparna.mojio.jrny">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -29,8 +29,8 @@
         <activity android:name="io.moj.mobile.android.sdk.networking.OAuthLoginActivity" />
 
         <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="YOUR_GOOGLE_API_KEY_HERE"/>
+            android:name="com.google.android.geo.API_KEY"
+            android:value="1060802630134-lhrlv1614vdo8fqpl66q82frokp5urol.apps.googleusercontent.com"/>
     </application>
 
 </manifest>
